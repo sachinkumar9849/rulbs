@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- new link ================================================================== -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <script src="https://kit.fontawesome.com/a26d9146a0.js" crossorigin="anonymous"></script>
+    <!-- new link ================================================================== -->
+
+    <meta name="description" content="Blueprint: Blueprint: Google Grid Gallery" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@100;200;300&family=Redressed&family=Roboto+Condensed:ital,wght@0,400;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <!-- <meta name="keywords" content="google getting started gallery, image gallery, image grid, template, masonry" />
+		<meta name="author" content="Codrops" /> -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body onload="myFunction()">
+    <div id="loading"></div>
+    <header class="section-header top-header-bg">
+        <div class="container">
+            <div class="header_img d-flex justify-content-between">
+                <div class="top-header ">
+                    <div class="header-logo text-center">
+                        <a class="navbar-brand font-weight-bold text-uppercase p-0" href="index.html"> <img src="./image/logo.png" alt="logo"></a>
+                    </div>
+
+
+                </div>
+                <ul class="d-flex align-items-center mb-0">
+                    <li>
+                        <!-- <label for="exampleFormControlSelect1">Language</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      
+                    </select> -->
+                        <div class="lngg">
+                            <select onChange="top.location.href=this.options[this.selectedIndex].value;" class="selectpicker" data-width="fit">
+                       
+                          <a href="#">
+                      
+                        <option value=""  data-content='</span> Deutsch'>Nepali </option>
+                        </a>
+                          <a href="#">
+                      
+                        <option value=""  data-content='English'>English </option>
+                        </a>
+                      </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_top">
+                            <a href=""><img src="image/rbb.png" class="" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="img_top">
+                            <a href=""><img src="image/prabhu.png" class="" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="img_top">
+                            <a href=""><img src="image/nerudo.png" class="" alt=""></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <nav class="header navbar navbar-expand-lg header-sticky">
+        <div class="container">
+
+
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="main_nav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home <span class="sr-only"></span
+              ></a>
+                    </li>
+
+
+                    <div class="dropdown">
+                        <button class="dropbtn">About</button>
+                        <div class="dropdown-content">
+                            <a href="events.html">Upcoming events/Activities </a>
+                            <a href="resent-activites.html">Resent activities </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Services</button>
+                        <div class="dropdown-content">
+                            <a href="events.html">Upcoming events/Activities </a>
+                            <a href="resent-activites.html">Resent activities </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Network</button>
+                        <div class="dropdown-content">
+                            <a href="events.html">Upcoming events/Activities </a>
+                            <a href="resent-activites.html">Resent activities </a>
+                        </div>
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="program.html">
+
+                          Financial             </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="program.html">
+
+                        News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="program.html">
+
+                        Notice</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="job.html">Gallery
+                        </a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Report</button>
+                        <div class="dropdown-content">
+                            <a href="events.html">Upcoming events/Activities </a>
+                            <a href="resent-activites.html">Resent activities </a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Contact
+              </a>
+                    </li>
+                </ul>
+                <!-- <div class="top-social-icon">
+                    <ul class="mb-0">
+                        <li>
+                            <a href="" class="pr-3"><i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+                            <a href="" class="pr-3"><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+                            <a href="" class="pr-3"><i class="fa fa-linkedin" aria-hidden="true"></i
+              ></a>
+                            <a href="" class="pr-3"><i class="fa fa-google" aria-hidden="true"></i
+              ></a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+
+    <!--============================= SLIDER START ============================ -->
+    <section id="slider" class="position-relative">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/slider.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    <div class="slider-content">
+                        <h2>1st Annual General Meeting</h2>
+                        <p>
+                            Rastra Utthan Laghubitta Bittiya Sanstha
+                        </p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/slider2.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    <div class="slider-content">
+                        <h2>1st Annual General Meeting</h2>
+                        <p>
+                            Rastra Utthan Laghubitta Bittiya Sanstha
+                        </p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="image/slider2.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    <div class="slider-content">
+                        <h2>1st Annual General Meeting</h2>
+                        <p>
+                            Rastra Utthan Laghubitta Bittiya Sanstha
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!--============================= SLIDER END  ============================ -->
+
+    <!--============================= ABOUT  START ============================ -->
+    <section id="about" class="padding">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="about_img">
+                        <img src="https://libertycollege.edu.np/wp-content/uploads/2021/01/ojha-sir.jpg" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="text-dark about-content h-100 d-flex flex-column justify-content-center">
+                        <h3 class="text-dark">About us</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos facere fuga voluptatibus magni tempore numquam rerum nobis. Sed ullam magni dolores, culpa vel veritatis deserunt. Temporibus laboriosam earum rerum! Lorem, ipsum dolor sit
+                            amet consectetur adipisicing elit. Quisquam dignissimos facere fuga voluptatibus magni tempore numquam rerum nobis. Sed ullam magni dolores, culpa vel veritatis deserunt. Temporibus laboriosam earum rerum!
+                        </p>
+                        <a href="" class="btn btn-about text-capitalize my-3">Read more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--============================= ABOUT  END ============================ -->
+    <!--============================= SERVICES  START ============================ -->
+    <section class="services padding" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="main-title d-flex flex-row justify-content-between align-items-center mb-4">
+              <div class="section-title mb-0">
+                <h4 class="text-dark"><span>Services</span></h4>
+                <!-- <li><i class="fa fa-snowflake-o" aria-hidden="true"></i></li> -->
+              </div>
+              <div class="button-wrapper ">
+                <a href="" class="btn text-capitalize my-3">View all  <span class="pl-3"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Service -->
+                <div class="single-service bg-white">
+                    <div class="img-block">
+                        <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/saving-pic.jpg" class="img-fluid" alt="">
+                    </div>
+                    <h4>Saving</h4>
+                    <p>
+                        Rulbsl helps to mobilize the community savings to strengthen loan disbursement system as well as to stable the household consumption through effective mobilization
+                    </p>
+                    <a href="" class="btn text-capitalize my-3">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Service -->
+                <div class="single-service bg-white">
+                    <div class="img-block">
+                        <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/loan-pic.jpg" class="img-fluid" alt="">
+                    </div>
+                    <h4>Loan</h4>
+                    <p>
+                        The areas of RULBSL implementation have much potentiality to initiate micro-credit activities for micro-enterprise development . RULBSL proposes to provide ten types of loan
+                    </p>
+                    <a href="" class="btn text-capitalize my-3">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Service -->
+                <div class="single-service bg-white">
+                    <div class="img-block">
+                        <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/insurance-pic.jpg" class="img-fluid" alt="">
+                    </div>
+                    <h4>Welfare</h4>
+                    <p>
+                        The areas of RULBSL implementation have much potentiality to initiate micro-credit activities for micro-enterprise development . RULBSL proposes to provide ten types of loan
+                    </p>
+                    <a href="" class="btn text-capitalize my-3">Read more</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!--============================= SERVICES  END ============================ -->
+    <!--============================= NEWS START ============================ -->
+    <section id="news_notice" class="padding position-relative">
+        <div class="container">
+            <div class="row">
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'firstTab')" id="defaultOpen">Notice</button>
+                    <button class="tablinks" onclick="openTab(event, 'secondTab')">News</button>
+                    <button class="tablinks" onclick="openTab(event, 'thirdTab')">Reports</button>
+                </div>
+
+                <div id="firstTab" class="tabcontent">
+                    <div class="list-group">
+
+                        <a href="" class="news_block_item list-group-item list-group-item-action border-top-0">
+                            <h5>RULBSL Result Link</h5>
+                            <p class=" text_read"><i class="fa fa-clock-o"></i> 20 Mar, 2022 &nbsp;&nbsp; <span class="fright">
+                                          
+                                      </span><img src="https://www.rulbsl.com/wp-content/themes/archiesoft/images/new-png.png">
+                            </p>
+
+                            <p></p>
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>IPO Open Notice 04-11-2078</h5>
+                            <p class=" text_read"><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>IPO Announcement notice Magh 2078</h5>
+                            <p class=" text_read"><i class="fa fa-clock-o"></i> 08 Feb, 2022</p>
+
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>IPO Open Notice 04-11-2078</h5>
+                            <p class=" text_read"><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="secondTab" class="tabcontent">
+                    <div class="list-group">
+                        <a href="" class="news_block_item list-group-item list-group-item-action border-top-0">
+                            <h5>RULBSL Result Published Magh 076</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 20 Mar, 2022 &nbsp;&nbsp; <span class="fright">
+                                      
+                                  </span><img src="https://www.rulbsl.com/wp-content/themes/archiesoft/images/new-png.png">
+                            </p>
+
+                            <p></p>
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>RULBSL Board of Directors Welcomes New Members</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <div id="thirdTab" class="tabcontent">
+                    <div class="list-group">
+                        <a href="" class="news_block_item list-group-item list-group-item-action border-top-0">
+                            <h5>RULBSL Result Published Magh 076</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 20 Mar, 2022 &nbsp;&nbsp; <span class="fright">
+                                  
+                              </span><img src="https://www.rulbsl.com/wp-content/themes/archiesoft/images/new-png.png">
+                            </p>
+
+                            <p></p>
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>RULBSL Board of Directors Welcomes New Members</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>RULBSL Board of Directors Welcomes New Members</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>RULBSL Board of Directors Welcomes New Members</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+                        <a href="" class="news_block_item list-group-item list-group-item-action">
+                            <h5>RULBSL Board of Directors Welcomes New Members</h5>
+                            <p class=" "><i class="fa fa-clock-o"></i> 16 Feb, 2022</p>
+
+                        </a>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!--============================= NEWS END ============================ -->
+
+    <!--============================= MAP  START============================ -->
+    <section id="map" class="padding">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="section-title mb-5">
+                    <h4 class="text-dark"><span>Branch Newtwork</span></h4>
+                    <!-- <li><i class="fa fa-snowflake-o" aria-hidden="true"></i></li> -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="map_img">
+                    <img src="https://www.rulbsl.com/wp-content/uploads/2021/12/Map-edited_11zon.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--============================= MAP  END ============================ -->
+
+
+
+
+
+    <footer id="footer " class="footer-bg-color py-5 ">
+        <div class="container ">
+
+            <div class="row ">
+                <div class="col-lg-3 col-6 ">
+                    <div class="footer-logo-box text_white ">
+                        <div class=" footer_logo">
+                            <a class=" footer-logo" href="index.html "><img src="image/logo.png" class="img-fluid" alt=""> </a>
+                        </div>
+                        <div class="footer_contact text-white">
+
+
+                            <p>Sanga, Banepa-13, Kavrepalanchok- Nepal</p>
+
+
+                            <p>977-11-660073</p>
+
+
+                            <p>info@rulbsl.com.np </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mt-2 mt-md-0 ">
+                    <div class="footer-title text_white footer_after ">
+                        <h4 class="mb-3 mb-md-4 text-white ">About</h4>
+                        <ul class="text-white ">
+                            <li class="mb-3 ">
+                                <a href=" " class=" our-services-text">Company Profile</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text">Chairman's Message</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class=" our-services-text"> Board of Directors</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text "> Management Team</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-lg-0 ">
+                    <div class="footer-title text_white footer_after ">
+                        <h4 class=" mb-3 mb-md-4 text-white">Update</h4>
+                        <ul>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">Notice</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">News</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">Gallery</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">Download</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-lg-0 ">
+                    <div class="footer-title text_white footer_after ">
+                        <h4 class="our-services-text mb-3 mb-md-4 text-white">Services</h4>
+                        <ul>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">Saving</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">Loan</a>
+                            </li>
+                            <li class="mb-3 ">
+                                <a href=" " class="our-services-text ">Welfare</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </footer>
+    <footer id="footer_button">
+        <div class="container">
+
+            <div class="row pt-2">
+                <div class="col-md-6 col-12">
+                    <p class="mb-0">
+                        © 2022 Rastra Utthan Laghubitta Bittiya Sanstha Ltd. | Website by
+                        <!-- <span class="testimonial-title">
+
+                        </span> -->
+                        <a class="testimonial-title" href="">DigiSoft Developers</a>
+                    </p>
+                </div>
+                <div class=" col-lg-4 col-sm-12 text-right ">
+                    <p>
+                        <a class="pr-2 " href="https://www.facebook.com/ " target="_blank "><i class="icon_footer fa fa-facebook " aria-hidden="true "></i></a>
+                        <a class="pr-2 " href="http://www.google-plus.com " target="_blank "><i class="icon_footer fa fa-google-plus " aria-hidden="true "></i></a>
+                        <a class="pr-2 " href="http://www.twitter.com " target="_blank "><i class="icon_footer fa fa-twitter " aria-hidden="true "></i></a>
+                        <a class=" " href="http://www.youtube.com " target="_blank "><i class="icon_footer fa fa-youtube " aria-hidden="true "></i></a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- NEW LIN ============================================================ -->
+
+    <script src="js/modernizr-3.5.0.min.js "></script>
+    <script src="js/jquery-1.12.4.min.js "></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/jquery.slicknav.min.js "></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/wow.min.js "></script>
+    <script src="js/animated.headline.js "></script>
+    <!-- <script src="js/jquery.magnific-popup.js "></script> -->
+    <!-- <script src="js/jquery.nice-select.min.js "></script> -->
+    <script src="js/jquery.sticky.js "></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js "></script> -->
+    <script src="js/jquery.counterup.min.js "></script>
+    <script src="js/jquery.ajaxchimp.min.js "></script>
+    <script src="js/jquery.magnific-popup.min.js "></script>
+    <!-- NEW LIN ============================================================ -->
+
+    <script src="js/imagesloaded.pkgd.min.js "></script>
+    <script src="js/masonry.pkgd.min.js "></script>
+    <script src="js/classie.js "></script>
+    <script src="js/cbpGridGallery.js "></script>
+    <script>
+        new CBPGridGallery(document.getElementById("grid-gallery "));
+    </script>
+    <script>
+        window.addEventListener("scroll ", function() {
+            var header = document.querySelector(".header ");
+            header.classList.toggle("sticky ", window.scrollY > 50);
+        })
+    </script>
+</body>
+
+</html>
+
+</html>
+
+</html>
