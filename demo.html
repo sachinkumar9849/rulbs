@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- new link ================================================================== -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <script src="https://kit.fontawesome.com/a26d9146a0.js" crossorigin="anonymous"></script>
+    <!-- new link ================================================================== -->
+
+    <meta name="description" content="Blueprint: Blueprint: Google Grid Gallery" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@100;200;300&family=Redressed&family=Roboto+Condensed:ital,wght@0,400;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <!-- <meta name="keywords" content="google getting started gallery, image gallery, image grid, template, masonry" />
+		<meta name="author" content="Codrops" /> -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+    <!-- <script src="js/modernizr.custom.js"></script> -->
+
+    <link href="css/flags.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script> -->
+    <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+    <style>
+        .main-header {
+            background: #ff8058;
+        }
+        
+        .main-navigation .menu a.active,
+        .main-navigation .menu a:hover {
+            background: #f57046;
+        }
+        
+        .main-navigation ul li {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .main-navigation ul li a {
+            padding: 25px 10px;
+            display: block;
+            text-transform: capitalize;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            line-height: 1;
+        }
+        
+        .main-navigation ul ul li a {
+            color: #ffffff;
+        }
+        /* Main Menu CSS End*/
+        /* Submenu / Dropdown Menu CSS */
+        
+        .main-navigation ul li ul {
+            position: absolute;
+            width: 250px;
+            left: 0;
+            top: 65px;
+            z-index: 2;
+            -webkit-transition: .3s;
+            transition: .3s;
+            visibility: hidden;
+            opacity: 0;
+            background-color: #1e1916;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-navigation ul li:hover>ul {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .main-navigation ul li ul li a {
+            padding: 14px 20px;
+            line-height: 26px;
+        }
+        
+        .main-navigation ul li ul li {
+            display: block;
+            text-align: left;
+        }
+        
+        .main-navigation ul li ul ul {
+            left: 250px;
+            top: 0;
+        }
+        
+        .main-navigation ul li ul li {
+            border-bottom: 1px solid #e5e5e52b;
+        }
+        
+        .main-navigation ul li ul li:last-child {
+            border-bottom: 0;
+        }
+        /* Submenu / Dropdown Menu CSS End */
+        /* Mobile Menu CSS Start*/
+        
+        .mobile-menu-trigger {
+            cursor: pointer;
+            margin-left: 30px;
+            display: none;
+            background: transparent;
+            border: none;
+        }
+        
+        .mobile-menu-trigger span {
+            height: 2px;
+            display: block;
+            width: 35px;
+            margin-bottom: 9px;
+            background-color: #fff;
+        }
+        
+        .mobile-menu-trigger span:last-child {
+            margin-bottom: 0;
+        }
+        
+        .mobile-menu-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 84%;
+            width: 100%;
+            background-color: #231d1b;
+            z-index: 999999;
+            opacity: 0;
+            visibility: hidden;
+            overflow-y: scroll;
+            -ms-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            overflow-x: hidden;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .mobile-menu-container li {
+            opacity: 0;
+            visibility: hidden;
+            -ms-transform: translateX(1000px);
+            -webkit-transform: translateX(1000px);
+            transform: translateX(100px);
+            -webkit-transition: 1s;
+            transition: 1s;
+            border-top: 1px solid rgb(255 255 255 / 8%);
+        }
+        
+        .mobile-menu-container li:nth-last-child(1) {
+            border-bottom: 1px solid rgb(255 255 255 / 8%);
+        }
+        
+        .mobile-menu-container li>a .slicknav_arrow:after {
+            content: "\f067";
+            position: absolute;
+            font-family: 'FontAwesome';
+            top: 0;
+            bottom: 0;
+            color: white;
+            z-index: 999;
+            margin: 0 auto;
+            text-align: center;
+            right: 0;
+            left: 0;
+            font-size: 16px;
+            line-height: 50px;
+        }
+        
+        .mobile-menu-container.menu-open li.slicknav_open>a .slicknav_arrow:after {
+            content: "\f068";
+        }
+        
+        .mobile-menu-container.menu-open {
+            opacity: 1;
+            visibility: visible;
+            -ms-transform: translateX(0%);
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+            width: 333px;
+        }
+        
+        .mobile-menu-container.menu-open li {
+            opacity: 1;
+            visibility: visible;
+            -ms-transform: translateX(0);
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .mobile-menu-close::before {
+            left: 15px;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        
+        .mobile-menu-close::after {
+            right: 13px;
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        
+        .mobile-menu-close::before,
+        .mobile-menu-close::after {
+            position: absolute;
+            height: 30px;
+            width: 2px;
+            background: #ffffff;
+            content: '';
+            top: 0;
+        }
+        
+        #mobile-menu-wrap {
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            padding: 150px 20px 20px 20px;
+        }
+        
+        #mobile-menu-wrap div {
+            background-color: transparent;
+        }
+        
+        #mobile-menu-wrap .slicknav_item i {
+            display: none;
+        }
+        /*Sidebar Start*/
+        
+        .slicknav_nav,
+        .slicknav_nav.slicknav_hidden {
+            display: block !important;
+            text-align: left;
+        }
+        
+        .slicknav_btn {
+            display: none !important;
+        }
+        
+        .slicknav_menu {
+            padding-left: 0;
+        }
+        
+        .slicknav_nav li>a {
+            display: block;
+            font-weight: 400;
+        }
+        
+        .slicknav_item.slicknav_row a {
+            border-bottom: 0;
+        }
+        
+        .slicknav_nav .slicknav_row,
+        .slicknav_nav a {
+            padding: 10px 0px;
+            margin: 0;
+        }
+        
+        .slicknav_nav .slicknav_arrow {
+            font-size: 0;
+            background: rgb(255 255 255 / 8%);
+            height: 100%;
+            width: 50px;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+        }
+        
+        .slicknav_nav ul {
+            margin: 0 0 0 0px;
+        }
+        
+        .slicknav_nav .menu-item-has-children ul {
+            margin-bottom: 00px;
+        }
+        
+        .slicknav_nav .menu-item-has-children ul li {
+            padding-left: 25px;
+        }
+        
+        .sub-menu .menu-item-has-children a i {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        
+        .slicknav_nav a:hover,
+        .slicknav_nav .slicknav_row:hover {
+            background-color: transparent;
+        }
+        
+        .slicknav_nav .slicknav_row:hover,
+        .slicknav_nav a:hover {
+            border-radius: 0;
+        }
+        
+        .slicknav_item.slicknav_row {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+        }
+        
+        .slicknav_arrow {
+            -webkit-transition: .3s;
+            transition: .3s;
+            right: 0;
+            top: 17px;
+            position: absolute;
+        }
+        
+        .slicknav_nav a,
+        .slicknav_row a {
+            color: #ffffff;
+            font-size: 18px;
+            display: inline-block;
+        }
+        /*Sidebar Start*/
+        /* Mobile Menu CSS End*/
+        
+        @media only screen and (max-width: 991px) {
+            /*Menu*/
+            .header-navigation-area {
+                display: none;
+            }
+        }
+        /*Footer start*/
+        
+        .codepen_profile {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+        
+        .codepen_profile a {
+            background: rgb(245 122 32 / 53%);
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: hsl(0deg 0% 80%) 0 5px 16px;
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+        }
+        /*Footer End*/
+        
+        .mobile-menu-trigger {
+            display: block;
+        }
+        
+        .header-navigation-area.justify-content-between.ml-auto {
+            display: none;
+        }
+        
+        .mobile-menu-trigger span {
+            height: 7px;
+            display: block;
+            width: 33px;
+            margin-bottom: 3px;
+            background-color: #fff;
+        }
+        
+        .mobile-menu-trigger span {
+            height: 7px;
+            display: block;
+            width: 33px;
+            margin-bottom: 3px;
+            background-color: #fff;
+        }
+        
+        .mobile-menu-trigger span {
+            height: 7px;
+            display: block;
+            width: 33px;
+            margin-bottom: 3px;
+            background-color: #fff;
+        }
+        
+        button.mobile-menu-trigger {
+            background: red;
+            position: absolute;
+            right: 22px;
+            top: 33px;
+        }
+    </style>
+
+</head>
+
+<body onload="myFunction()">
+    <div id="loading"></div>
+
+
+    <!-- //============================================
+                     Header Start 
+        =============================================// -->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-close"></div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+    <!-- Mobile Menu End -->
+    <button class="mobile-menu-trigger"> 
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <header class="header header-sticky">
+        <!--// Top Header Start-->
+
+        <!--// Top Header End -->
+
+        <!--// Main header -->
+        <div class="main-header">
+
+            <div class="container">
+                <nav class="navbar navbar-expand-lg p-0 main-navigation">
+
+
+                    <!--  Use flexbox utility classes to change how the child elements are justified  -->
+                    <div class="header-navigation-area justify-content-between ml-auto">
+
+                        <ul id="main-menu" class="menu m-0">
+                            <li class="menu-item-has-children">
+                                <a href="">Home <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Home One</a></li>
+                                    <li><a href="">Home Two</a></li>
+                                    <li><a href="">Home Three</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="about-us.html">About</a></li>
+
+                            <li class="menu-item-has-children active">
+                                <a href="">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="">Services One</a>
+                                    </li>
+                                    <!-- Sub Sub menu -->
+                                    <li class="menu-item-has-children">
+                                        <a href="services-2.html" class="active">Services Two <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a class="active" href="">Home One</a></li>
+                                            <li><a href="">Home Two</a></li>
+                                            <li><a href="">Home Three</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="service-details.html">Service Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="">Projects <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Projects</a></li>
+                                    <li><a href="">Project Details</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="">Blog</a></li>
+                                    <li><a href="">Blog Details</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--// Main End -->
+    </header>
+    <!-- //============================================
+                     Header End
+        =============================================// -->
+
+    <!-- NEW LIN ============================================================ -->
+
+    <script src="js/modernizr-3.5.0.min.js "></script>
+    <script src="js/jquery-1.12.4.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/jquery.slicknav.min.js "></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/wow.min.js "></script>
+    <script src="js/animated.headline.js "></script>
+    <!-- <script src="js/jquery.magnific-popup.js "></script> -->
+    <!-- <script src="js/jquery.nice-select.min.js "></script> -->
+    <script src="js/jquery.sticky.js "></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js "></script> -->
+    <script src="js/jquery.counterup.min.js "></script>
+    <script src="js/jquery.ajaxchimp.min.js "></script>
+    <script src="js/jquery.magnific-popup.min.js "></script>
+    <!-- NEW LIN ============================================================ -->
+
+    <script src="js/imagesloaded.pkgd.min.js "></script>
+    <script src="js/masonry.pkgd.min.js "></script>
+
+    <script src="js/cbpGridGallery.js "></script>
+    <script src="js/jquery.flagstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+    <!-- <script src="js/classie.js "></script> -->
+
+
+    <script>
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector(".header");
+            header.classList.toggle("sticky-bar", window.scrollY > 50);
+        });
+    </script>
+    <script>
+        (function($) {
+            "use strict";
+            var PUS = {};
+            /*==========================================
+                    :: slicknav
+            ==========================================*/
+            PUS.slicknav = function() {
+                $("#main-menu").slicknav({
+                    allowParentLinks: true,
+                    prependTo: '#mobile-menu-wrap',
+                    label: '',
+                });
+
+                $(".mobile-menu-trigger").on("click", function(e) {
+                    $(".mobile-menu-container").addClass("menu-open");
+                    e.stopPropagation();
+                });
+
+                $(".mobile-menu-close").on("click", function(e) {
+                    $(".mobile-menu-container").removeClass("menu-open");
+                    e.stopPropagation();
+                });
+            };
+            $(document).ready(function() {
+                PUS.slicknav();
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>

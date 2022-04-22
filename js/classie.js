@@ -360,3 +360,125 @@ function openTab(evt, cityName) {
 
 document.getElementById("defaultOpen").click();
 // Notice News js end
+
+
+
+
+$('#basic').flagStrap();
+
+
+
+$('#options').flagStrap({
+    countries: {
+        "NP": "",
+
+
+        "US": ""
+    },
+    buttonSize: false,
+    buttonType: false,
+    labelMargin: "10px",
+    scrollable: false,
+    scrollableHeight: "350px"
+});
+// Notice end
+//SERVOCES
+$(".feature_slider").slick({
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [{
+            breakpoint: 1399,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 1080,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 780,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            },
+        },
+    ],
+});
+
+
+
+// NOTICE POPUP START 
+
+$(document).ready(function() {
+
+    var id = '#dialog';
+
+    //Get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+
+    //Set heigth and width to mask to fill up the whole screen
+    $('#mask').css({
+        'width': maskWidth,
+        'height': maskHeight
+    });
+
+    //transition effect		
+    $('#mask').fadeIn(500);
+    $('#mask').fadeTo("slow", 0.9);
+
+    //Get the window height and width
+    var winH = $(window).height();
+    var winW = $(window).width();
+
+    //Set the popup window to center
+    $(id).css('top', winH / 2 - $(id).height() / 2);
+    $(id).css('left', winW / 2 - $(id).width() / 2);
+
+    //transition effect
+    $(id).fadeIn(2000);
+
+    //if close button is clicked
+    $('.window .close').click(function(e) {
+        //Cancel the link behavior
+        e.preventDefault();
+
+        $('#mask').hide();
+        $('.window').hide();
+    });
+
+    //if mask is clicked
+    $('#mask').click(function() {
+        $(this).hide();
+        $('.window').hide();
+    });
+
+});
+// NOTICE POPUP END
+
+// NAVE SCROOL
+
+
+$(document).ready(function() {
+    window.addEventListener("scroll", function() {
+        var header = document.querySelector(".header");
+        header.classList.toggle("sticky-bar", window.scrollY > 50);
+    });
+
+});

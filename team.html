@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- new link ================================================================== -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <script src="https://kit.fontawesome.com/a26d9146a0.js" crossorigin="anonymous"></script>
+    <!-- new link ================================================================== -->
+    <meta name="description" content="Blueprint: Blueprint: Google Grid Gallery" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@100;200;300&family=Redressed&family=Roboto+Condensed:ital,wght@0,400;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <!-- <meta name="keywords" content="google getting started gallery, image gallery, image grid, template, masonry" />
+         <meta name="author" content="Codrops" /> -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <!-- <script src="js/modernizr.custom.js"></script> -->
+    <link href="css/flags.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script> -->
+    <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+    <style>
+        .dd-select {
+            width: 78px !IMPORTANT;
+        }
+        
+        .dd-options {
+            border: solid 1px #ccc;
+            border-top: none;
+            list-style: none;
+            box-shadow: 0px 1px 5px #ddd;
+            display: none;
+            position: unset !important;
+            z-index: 2000;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            overflow: auto;
+        }
+        
+        a.dd-selected {
+            padding: 0;
+        }
+        
+        a.dd-option.dd-option-selected {
+            padding: 0;
+        }
+        
+        img.dd-selected-image {
+            width: 55px !important;
+            height: 38px !important;
+            object-fit: fill;
+            max-width: 43px;
+        }
+        
+        a.dd-selected {
+            background: white;
+        }
+        
+        ul.dd-options.dd-click-off-close {
+            width: 78px !IMPORTANT;
+            background: white !IMPORTANT;
+            z-index: 9999999;
+            position: relative !important;
+        }
+        
+        a.dd-option.dd-option-selected {
+            background: white;
+        }
+        
+        img.dd-option-image {
+            width: 55px !important;
+            height: 38px !important;
+            object-fit: fill;
+            max-width: 43px;
+        }
+        
+        a.dd-option {
+            padding: 0;
+            padding-bottom: 5px;
+        }
+        
+        .language_block {
+            position: absolute;
+            top: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .dd-select {
+            border-radius: 33px;
+            overflow: hidden;
+            border-top-right-radius: 5px !important;
+        }
+        /* .dd-select {
+         border-radius: 14px !important;
+         } */
+        
+        ul.dd-options.dd-click-off-close {
+            border-bottom-right-radius: 5px !important;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <div id="loading"></div>
+    <!-- TOP HEADER SMALL START -->
+    <section class="s_top_header clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i> +977(0)61-461345, 245243 | <i class="fa fa-envelope-o" aria-hidden="true"></i> rulbsl@gmail.com
+                    </p>
+                </div>
+                <div class="col-lg-6  d-flex align-items-center justify-content-end">
+                    <ul class="social_icon clearfix mb-0">
+                        <li><a href="" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TOP HEADER SMALL END -->
+    <header class="header section-header top-header-bg header-sticky">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="header_img">
+                        <ul class="d-flex align-items-center mb-0">
+                            <li>
+                                <div class="img_top">
+                                    <a href=""><img src="image/rbb.png" class="" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img_top">
+                                    <a href=""><img src="image/prabhu.png" class="" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img_top">
+                                    <a href=""><img src="image/nerudo.png" class="" alt=""></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-header ">
+                        <div class="header-logo text-center">
+                            <a class="navbar-brand font-weight-bold text-uppercase p-0" href="index.html"> <img src="image/logo1.png" alt="logo"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group language_block">
+                        <select name="" id="slick">
+                     <option
+                        value=""
+                        data-description=""
+                        data-imagesrc="https://us.123rf.com/450wm/upixel123/upixel1231303/upixel123130300071/18709113-button-nepal.jpg?ver=6"
+                        ></option>
+                     <option
+                        value=""
+                        data-description=""
+                        data-imagesrc="https://e7.pngegg.com/pngimages/527/151/png-clipart-united-kingdom-union-jack-flag-of-great-britain-graphics-united-kingdom.png"
+                        ></option>
+                  </select>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu-container">
+                        <div class="mobile-menu-close"></div>
+                        <div id="mobile-menu-wrap"></div>
+                    </div>
+                    <!-- Mobile Menu End -->
+                    <button class="mobile-menu-trigger"> 
+               <span></span>
+               <span></span>
+               <span></span>
+               </button>
+                    <header class="header header-sticky">
+                        <!--// Top Header Start-->
+                        <!--// Top Header End -->
+                </div>
+            </div>
+        </div>
+        </header>
+        <!-- //============================================
+         MENU Start 
+         =============================================// -->
+        <div class="header-navigation-area justify-content-between ml-auto">
+            <ul id="main-menu" class="menu m-0">
+                <li>
+                    <a href="about-us.html">Home</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="company_profile.html">Company Profile</a>
+                        </li>
+                        <li>
+                            <a href="chairman_msg.html">Chairman's Message</a>
+                        </li>
+                        <li>
+                            <a href="team.html">Management Team</a>
+                        </li>
+                        <li>
+                            <a href="board_directors.html">Bord of Directors</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children active">
+                    <a href="">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="saving.html">Saving</a>
+                        </li>
+                        <li>
+                            <a href="loan.html">Loan</a>
+                        </li>
+                        <li>
+                            <a href="insurance.html">Insurance</a>
+                        </li>
+                        <li>
+                            <a href="marketing_strategy.html">Marketing Strategy</a>
+                        </li>
+                        <!-- Sub Sub menu -->
+                        <li class="menu-item-has-children">
+                            <a href="services-2.html" class="active">Services Two <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <ul class="sub-menu">
+                                <li><a class="active" href="">Home One</a></li>
+                                <li><a href="">Home Two</a></li>
+                                <li><a href="">Home Three</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="">Newtwork <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="area_coverage.html">Area Coverage</a></li>
+                        <li><a href="branch.html">Branch</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="financial.html">Financial</a>
+                </li>
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+                <li>
+                    <a href="notice.html">Notice</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Notice</a>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="">Reports <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="quarterly.html">quarterly</a></li>
+                        <li>
+                            <a href="annual.html">Annual</a>
+                        </li>
+                        <li>
+                            <a href="crdit.html">Credit</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //============================================
+         MENU End
+         =============================================// -->
+        <!-- breadcrumb START -->
+        <section id="breadcrumb_item" class="pb-0 breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 m-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item font-weight-bold "><a href="index.html" class="text-dark">Home</a></li>
+                                <li class="breadcrumb-item font-weight-bold active" aria-current="page"> Management Team</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb END -->
+        <!-- TEAM START -->
+        <section class="content-pd inner-content padding">
+            <div class="container">
+
+                <h1 class="text_blue pb-4">Executive Director</h1>
+                <div class="row person-info">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/1-sudhir.jpg">
+                            <h3>Mr. Sudhir Prasad Lohani</h3>
+                            Executive Director<br> Phone: 01-42423459, Ext-105<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <h1 class="text_blue py-4">Head of Departments</h1>
+                <div class="row person-info">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/2-jaya.jpg">
+                            <h3>Mrs. Jaya Lohani</h3>
+                            Planning &amp; Deputy Executive Director<br> Phone: 01-4239888, Ext-571<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/3-jagannath.jpg">
+                            <h3>Mr. Jaganath Kuikel</h3>
+                            Assistant Executive Director<br> Phone: 01-4247999, Ext-228<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/4-suresh.jpg">
+                            <h3>Mr. Suresh Bohara</h3>
+                            Director-HR Department<br> Phone: 01-4247999, Ext-581<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/8-hiranya.jpg">
+                            <h3>Mr. Hiranya Bahadur Thapa</h3>
+                            Director-Interanal Audit Department<br> Phone: 01-4247999, Ext-666<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/5-netra.jpg">
+                            <h3>Mr. Netra Jung Thapa</h3>
+                            Director-Planning & Complince Dept.<br> Phone: 01-4247999, Ext-568<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/6-pankaj.jpg">
+                            <h3>Mr. Pankaj Pandey</h3>
+                            Director- Finance Dept<br> Phone: 01-4247999, Ext-511<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/7-saroj.jpg">
+                            <h3>Mr. Saroj Raj Bharati</h3>
+                            Director-IT & G.S. Dept.<br> Phone: 01-4247999, Ext-455<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://nepalbank.com.np/storage/thumbs/team/2021/03/dhirajpp1_1615202420.jpg">
+                            <h3>Dhiraj Rai</h3>
+                            General Service Department<br> Phone: 01-4247999, Ext-230<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://nepalbank.com.np/storage/thumbs/team/2021/03/sunil-kumar-nepal_1615202512.jpg">
+                            <h3>Sushil Kumar Nepal</h3>
+                            Operations Department<br> Phone: 01-4247999, Ext-548<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://nepalbank.com.np/storage/thumbs/team/2021/03/sachita-parajuli_1615202643.jpg">
+                            <h3>Sachita Parajuli</h3>
+                            Loan Recovery Department<br> Phone: 01-4247999, Ext-251<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://nepalbank.com.np/storage/thumbs/team/2021/03/kiransir_1615202797.jpg">
+                            <h3>Kiran Jung Karki</h3>
+                            IT/MIS Department<br> Phone: 01-4247999, Ext-272<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-person-info">
+                            <img src="https://nepalbank.com.np/storage/thumbs/team/2021/03/nirmal-krishna-pandey_1615202886.jpg">
+                            <h3>Nirmal Krishna Pandey</h3>
+                            Retail Credit Department<br> Phone: 01-4247999, Ext-227<br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- TEAM END -->
+        <!-- FOOTER END -->
+        <footer id="footer " class="footer-bg-color py-5 ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-4 col-6 mt-2 mt-md-0 ">
+                        <div class="footer-title text_white footer_after ">
+                            <h4 class="mb-3 mb-md-4 text-white ">About</h4>
+                            <ul class="text-white ">
+                                <li class="mb-3 ">
+                                    <a href=" " class=" our-services-text ">Company Profile</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Chairman's Message</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class=" our-services-text "> Board of Directors</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text "> Management Team</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-4 mt-lg-0 ">
+                        <div class="footer-title text_white footer_after ">
+                            <h4 class=" mb-3 mb-md-4 text-white ">Update</h4>
+                            <ul>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Notice</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">News</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Gallery</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Download</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 mt-4 mt-lg-0 ">
+                        <div class="footer-title text_white footer_after ">
+                            <h4 class="our-services-text mb-3 mb-md-4 text-white ">Services</h4>
+                            <ul>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Saving</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Loan</a>
+                                </li>
+                                <li class="mb-3 ">
+                                    <a href=" " class="our-services-text ">Welfare</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer id="footer_button ">
+            <div class="container ">
+                <div class="row pt-2 ">
+                    <div class="col-md-6 col-12 ">
+                        <p class="mb-0 ">
+                            © 2022 Rastra Utthan Laghubitta Bittiya Sanstha Ltd. | Website by
+                            <!-- <span class="testimonial-title ">
+                        </span> -->
+                            <a class="testimonial-title " href=" ">DigiSoft Developers</a>
+                        </p>
+                    </div>
+                    <div class=" col-lg-4 col-sm-12 text-right ">
+                        <p>
+                            <a class="pr-2 " href="https://www.facebook.com/ " target="_blank "><i class="icon_footer fa fa-facebook " aria-hidden="true "></i></a>
+                            <a class="pr-2 " href="http://www.google-plus.com " target="_blank "><i class="icon_footer fa fa-google-plus " aria-hidden="true "></i></a>
+                            <a class="pr-2 " href="http://www.twitter.com " target="_blank "><i class="icon_footer fa fa-twitter " aria-hidden="true "></i></a>
+                            <a class=" " href="http://www.youtube.com " target="_blank "><i class="icon_footer fa fa-youtube " aria-hidden="true "></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- NEW LIN ============================================================ -->
+        <script src="js/modernizr-3.5.0.min.js "></script>
+        <script src="js/jquery-1.12.4.min.js "></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+        <script src="js/popper.min.js "></script>
+        <script src="js/bootstrap.min.js "></script>
+        <script src="js/jquery.slicknav.min.js "></script>
+        <script src="js/slick.min.js "></script>
+        <script src="js/wow.min.js "></script>
+        <script src="js/animated.headline.js "></script>
+        <!-- <script src="js/jquery.magnific-popup.js "></script> -->
+        <!-- <script src="js/jquery.nice-select.min.js "></script> -->
+        <script src="js/jquery.sticky.js "></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js "></script> -->
+        <script src="js/jquery.counterup.min.js "></script>
+        <script src="js/jquery.ajaxchimp.min.js "></script>
+        <script src="js/jquery.magnific-popup.min.js "></script>
+        <!-- NEW LIN ============================================================ -->
+        <script src="js/imagesloaded.pkgd.min.js "></script>
+        <script src="js/masonry.pkgd.min.js "></script>
+        <script src="js/cbpGridGallery.js "></script>
+        <script src="js/jquery.flagstrap.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js "></script>
+        <script type="text/javascript " src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js "></script>
+        <script src="js/classie.js "></script>
+        <script>
+            new CBPGridGallery(document.getElementById("grid-gallery "));
+        </script>
+        <!-- <script>
+         var burger = $(".hamburger-box ");
+         
+         burger.on("click ", function(e) {
+             $(this).toggleClass("active ");
+             $('.js-nav').parent().find('.menu').toggleClass('active');
+         });
+         </script> -->
+        <script>
+            $(document).ready(function() {
+                $(".dropbtn_block ").click(function() {
+                    $(".dropdown_content ").toggle(600);
+                });
+            });
+        </script>
+        <script>
+            (function($) {
+                "use strict ";
+                var PUS = {};
+                /*==========================================
+                        :: slicknav
+                ==========================================*/
+                PUS.slicknav = function() {
+                    $("#main-menu ").slicknav({
+                        allowParentLinks: true,
+                        prependTo: '#mobile-menu-wrap',
+                        label: '',
+                    });
+
+                    $(".mobile-menu-trigger ").on("click ", function(e) {
+                        $(".mobile-menu-container ").addClass("menu-open ");
+                        e.stopPropagation();
+                    });
+
+                    $(".mobile-menu-close ").on("click ", function(e) {
+                        $(".mobile-menu-container ").removeClass("menu-open ");
+                        e.stopPropagation();
+                    });
+                };
+                $(document).ready(function() {
+                    PUS.slicknav();
+                });
+            })(jQuery);
+        </script>
+        <script>
+            window.addEventListener("scroll ", function() {
+                var header = document.querySelector(".header ");
+                header.classList.toggle("sticky-bar ", window.scrollY > 50);
+            });
+        </script>
+        <script>
+            $("#slick ").ddslick({
+                with: "100% ",
+                imagePosition: "left ",
+                selectText: "Select your ",
+                onSelected: function(data) {
+                    $("#selected ").html(data.selectedData.value);
+                },
+            });
+        </script>
+        <!-- NOTICE POPUP START -->
+        <!-- use this for popup-->
+        <div id="boxes ">
+            <div style="display: none; " id="dialog " class="window ">
+                <h2>Notices</h2>
+                <div id="popupfoot ">
+                    <div class="save-box ">
+                        <div class="save-img ">
+                            <img src="https://www.rulbsl.com/wp-content/uploads/2019/09/insurance-pic.jpg " class="img-fluid ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 1478px; font-size: 32pt; color:white; height: auto; display: none; opacity: 0.8; " id="mask "></div>
+        </div>
+        <!-- use this for popup-->
+</body>
+
+</html>
+
+</html>
